@@ -1,13 +1,19 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using System;
 using System.Threading.Tasks;
+using UserReporting.Shared.Events;
 using UserReporting.Web.Models;
+using UserReporting.Web.Services;
 
 namespace UserReporting.Web.Controllers
 {
     public class UserReportingController : Controller
     {
-        public UserReportingController()
+        private readonly IEventPublisher _eventPublisher;
+
+        public UserReportingController(IEventPublisher eventPublisher)
         {
+            _eventPublisher = eventPublisher;
         }
 
         public IActionResult Index()
@@ -21,6 +27,18 @@ namespace UserReporting.Web.Controllers
         {
             if (ModelState.IsValid)
             {
+                var @event = new CreateReportRequested
+                {
+                    Id = Guid.NewGuid(),
+                    FirstName = model.FirstName,
+                    LastName = model.LastName,
+                    MiddleName = model.MiddleName,
+                    DateOfBirth = model.DateOfBirth,
+                    JoinedOn = model.JoinedOn
+                };
+
+                await _eventPublisher.Publish(@event);
+
                 await Task.CompletedTask;
                 return Redirect("Downloads");
             }
