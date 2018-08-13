@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27703.2042
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserReporting.Web", "UserReporting.Web\UserReporting.Web.csproj", "{8A320D0B-AE8E-4258-A0DF-F8FDAFBB68DB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UserReporting.Web", "UserReporting.Web\UserReporting.Web.csproj", "{8A320D0B-AE8E-4258-A0DF-F8FDAFBB68DB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserReporting.Shared", "UserReporting.Shared\UserReporting.Shared.csproj", "{1FB7ADBA-05EF-4C9A-9E7E-E50C1C3FE491}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{8A320D0B-AE8E-4258-A0DF-F8FDAFBB68DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8A320D0B-AE8E-4258-A0DF-F8FDAFBB68DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8A320D0B-AE8E-4258-A0DF-F8FDAFBB68DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1FB7ADBA-05EF-4C9A-9E7E-E50C1C3FE491}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1FB7ADBA-05EF-4C9A-9E7E-E50C1C3FE491}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1FB7ADBA-05EF-4C9A-9E7E-E50C1C3FE491}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1FB7ADBA-05EF-4C9A-9E7E-E50C1C3FE491}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
