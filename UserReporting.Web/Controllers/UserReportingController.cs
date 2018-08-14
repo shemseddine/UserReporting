@@ -40,7 +40,7 @@ namespace UserReporting.Web.Controllers
                 await _eventPublisher.Publish(@event);
 
                 await Task.CompletedTask;
-                return Redirect("Downloads");
+                return Redirect("/Downloads");
             }
 
             return View("Index");
