@@ -1,0 +1,25 @@
+﻿@model IEnumerable<DownloadItem>
+@{
+    ViewData["Title"] = "Downloads";
+}
+
+<div class="row">
+    <h2>Downloads</h2>
+    <table class="table table-condensed">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>PDF</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Name</td>
+                    <td><a href="@item.Url">Download</a></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
