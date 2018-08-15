@@ -39,7 +39,6 @@ namespace UserReporting.Web.Controllers
 
                 await _eventPublisher.Publish(@event);
 
-                await Task.CompletedTask;
                 return Redirect("/Downloads");
             }
 
